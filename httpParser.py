@@ -27,10 +27,10 @@ class HttpParser:
             HTTP status code.
         """
         #print(">>>>",httpRes)
-        if(httpRes != None):
+        if httpRes != None:
             retParseResponse=str(httpRes).partition("+IPD,")[2]
             #print(">>>>>>>>>>>>>>>>>",retParseResponse)
-            retParseResponse=retParseResponse.split(r"\r\n\r\n");
+            retParseResponse=retParseResponse.split(r"\r\n\r\n")
             #print(">>>>>>>>>>>>>>>>>",retParseResponse[0])
             self.__httpResponse = retParseResponse[1]
             #print(">>>>>>>>>>>>>>>>>???",retParseResponse[1])
@@ -40,7 +40,7 @@ class HttpParser:
                 if code.isdigit():
                     self.__httpErrCode=int(code)
 
-            if(self.__httpErrCode != 200):
+            if self.__httpErrCode != 200:
                 self.__httpResponse=None
 
             return self.__httpErrCode

@@ -24,7 +24,7 @@ print("\r\n\r\n")
 Print ESP8266 AT comand version and SDK details
 '''
 esp8266_at_ver = esp01.getVersion()
-if(esp8266_at_ver != None):
+if esp8266_at_ver != None:
     print(esp8266_at_ver)
 
 '''
@@ -44,10 +44,10 @@ print("\r\n\r\n")
 Connect with the WiFi
 '''
 print("Try to connect with the WiFi..")
-while (1):
+while 1:
     if "WIFI CONNECTED" in esp01.connectWiFi("ssid","pwd"):
         print("ESP8266 connect with the WiFi..")
-        break;
+        break
     else:
         print(".")
         time.sleep(2)
@@ -56,7 +56,7 @@ while (1):
 print("\r\n\r\n")
 print("Now it's time to start HTTP Get/Post Operation.......\r\n")
 
-while(1):
+while 1:
     led.toggle()
     time.sleep(1)
 
