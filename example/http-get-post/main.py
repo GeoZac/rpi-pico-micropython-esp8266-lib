@@ -37,7 +37,7 @@ esp01.setCurrentWiFiMode()
 #    print(items)
     #for item in tuple(items):
     #    print(item)
-  
+
 print("\r\n\r\n")
 
 '''
@@ -56,10 +56,10 @@ while (1):
 print("\r\n\r\n")
 print("Now it's time to start HTTP Get/Post Operation.......\r\n")
 
-while(1):    
+while(1):
     led.toggle()
     time.sleep(1)
-    
+
     '''
     Going to do HTTP Get Operation with www.httpbin.org/ip, It return the IP address of the connected device
     '''
@@ -68,8 +68,8 @@ while(1):
     print("HTTP Code:",httpCode)
     print("HTTP Response:",httpRes)
     print("-----------------------------------------------------------------------------\r\n\r\n")
-    
-    
+
+
     '''
     Going to do HTTP Post Operation with www.httpbin.org/post
     '''
@@ -80,5 +80,5 @@ while(1):
     print("HTTP Response:",httpRes)
     print("--------------------------------------------------------------------------------\r\n\r\n")
     #break
-    
+
 
